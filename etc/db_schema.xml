@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <!-- Seller Table -->
+    <table name="seller_data" resource="default" engine="innodb" comment="Seller Data Table">
+        <!-- Primary Information -->
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+    
+        <!-- Personal Information -->
+        <column xsi:type="varchar" name="first_name" length="100" nullable="false" comment="First Name"/>
+        <column xsi:type="varchar" name="last_name" length="100" nullable="false" comment="Last Name"/>
+        <column xsi:type="varchar" name="username" length="100" nullable="false" comment="Username"/>
+        <column xsi:type="varchar" name="email" length="225" nullable="false" comment="Email"/>
+        <column xsi:type="date" name="date_of_birth" nullable="true" comment="Date of Birth"/>
+        <column xsi:type="varchar" name="gender" length="10" nullable="true" comment="Gender"/>
+    
+        <!-- Profile Information -->
+        <column xsi:type="varchar" name="profile_pic" length="225" nullable="true" comment="Profile Picture"/>
+        <column xsi:type="varchar" name="contact_number" length="20" nullable="true" comment="Contact Number"/>
+        <column xsi:type="varchar" name="password_encrypted" length="225" nullable="false" comment="Encrypted Password"/>
+    
+        <!-- Address and Social Media Fields (stored as JSON) -->
+        <column xsi:type="json" name="address_fields" nullable="true" comment="Address Fields (JSON)"/>
+        <column xsi:type="json" name="social_media_ids" nullable="true" comment="Social Media IDs (JSON)"/>
+    
+        <!-- Store Information -->
+        <column xsi:type="varchar" name="shop_url" length="255" nullable="true" comment="Shop URL"/>
+        <column xsi:type="varchar" name="shop_title" length="255" nullable="true" comment="Shop Title"/>
+        <column xsi:type="text" name="company_description" nullable="true" comment="Company Description"/>
+        <column xsi:type="int" name="is_seller" unsigned="true" nullable="false" default="0" comment="Is Seller?"/>
+        <column xsi:type="int" name="store_id" unsigned="true" nullable="false" comment="Store ID"/>
+    
+        <!-- Policies and Payment Information -->
+        <column xsi:type="text" name="payment_source" nullable="true" comment="Payment Source"/>
+        <column xsi:type="text" name="return_policy" nullable="true" comment="Return Policy"/>
+        <column xsi:type="text" name="shipping_policy" nullable="true" comment="Shipping Policy"/>
+        <column xsi:type="text" name="privacy_policy" nullable="true" comment="Privacy Policy"/>
+        <column xsi:type="text" name="allowed_categories" nullable="false" comment="Allowed Categories IDs"/>
+    
+        <!-- Meta Information -->
+        <column xsi:type="text" name="meta_keyword" nullable="true" comment="Meta Keywords"/>
+        <column xsi:type="text" name="meta_description" nullable="true" comment="Meta Description"/>
+        <column xsi:type="varchar" name="banner_pic" length="225" nullable="true" comment="Banner Image"/>
+        <column xsi:type="varchar" name="logo_pic" length="225" nullable="true" comment="Logo Image"/>
+    
+        <!-- Admin Notifications -->
+        <column xsi:type="smallint" name="admin_notification" unsigned="true" nullable="false" default="0" comment="Admin Notification Flag"/>
+    
+        <!-- Timestamps -->
+        <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+    
+        <!-- Primary Key -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    
+        <!-- Indexes -->
+        <index referenceId="IDX_SELLER_ID" indexType="btree">
+            <column name="seller_id"/>
+        </index>
+    </table>
+
+    <!-- Product Table -->
+    <table name="product_data" resource="default" engine="innodb" comment="Marketplace Product Table">
+        <!-- Primary Information -->
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false" default="0" comment="Magento Product ID"/>
+        
+        <!-- Seller and Store Information -->
+        <column xsi:type="int" name="seller_id" unsigned="true" nullable="false" default="0" comment="Seller ID"/>
+        <column xsi:type="int" name="store_id" unsigned="true" nullable="false" default="0" comment="Store ID"/>
+    
+        <!-- Status and Approval Information -->
+        <column xsi:type="smallint" name="status" unsigned="true" nullable="false" default="0" comment="Product Status"/>
+        <column xsi:type="smallint" name="is_approved" unsigned="true" nullable="false" default="0" comment="Is Product Approved by Admin"/>
+    
+        <!-- Notification Flags -->
+        <column xsi:type="smallint" name="notification_flags" unsigned="true" nullable="false" default="0" comment="Notification Flags (bitwise)"/>
+    
+        <!-- Timestamps -->
+        <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+    
+        <!-- Primary Key -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    
+        <!-- Foreign Key to Magento Product Table -->
+        <constraint xsi:type="foreign" referenceId="FK_PRODUCT_MAGEPRD_ID_CAT_PRD_ENTT_ENTT_ID" table="produc_data" column="product_id" referenceTable="catalog_product_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+        
+        <!-- Foreign Key to Seller Data Table -->
+        <constraint xsi:type="foreign" referenceId="FK_PRODUCT_SELLER_ID" table="produc_data" column="seller_id" referenceTable="seller_data" referenceColumn="entity_id" onDelete="CASCADE"/>
+    
+        <!-- Indexes for faster lookups -->
+        <index referenceId="IDX_MAGEPRODUCT_ID" indexType="btree">
+            <column name="mageproduct_id"/>
+        </index>
+        <index referenceId="IDX_SELLER_ID" indexType="btree">
+            <column name="seller_id"/>
+        </index>
+        <index referenceId="IDX_STATUS" indexType="btree">
+            <column name="status"/>
+        </index>
+    </table>
+
+    <!-- Orders Table -->   
+    <table name="orders_data" resource="default" engine="innodb" comment="Marketplace Orders Table">
+        <!-- Primary Information -->
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity ID (Primary Key)"/>
+        
+        <!-- Foreign Keys -->
+        <column xsi:type="int" name="order_id" unsigned="true" nullable="false" comment="Magento Order ID"/>
+        <column xsi:type="int" name="seller_id" unsigned="true" nullable="false" comment="Seller ID"/>
+        <column xsi:type="int" name="buyer_id" unsigned="true" nullable="false" comment="Buyer ID"/>
+    
+        <!-- Order Details -->
+        <column xsi:type="decimal" name="total_amount" precision="10,2" nullable="false" comment="Total Order Amount"/>
+        <column xsi:type="varchar" name="order_status" length="32" nullable="false" comment="Order Status"/>
+        <column xsi:type="varchar" name="payment_method" length="255" nullable="false" comment="Payment Method"/>
+        <column xsi:type="smallint" name="payment_status" unsigned="true" nullable="false" default="0" comment="Payment Status"/>
+    
+        <!-- Shipping Information -->
+        <column xsi:type="decimal" name="shipping_charges" scale="4" precision="12" default="0.0000" nullable="false" comment="Shipping Charges"/>
+        <column xsi:type="varchar" name="carrier_name" length="255" comment="Carrier Name"/>
+        <column xsi:type="varchar" name="tracking_number" length="255" comment="Tracking Number"/>
+    
+        <!-- Coupon and Tax Information -->
+        <column xsi:type="decimal" name="coupon_amount" scale="4" precision="12" default="0.0000" nullable="false" comment="Coupon Amount"/>
+        <column xsi:type="varchar" name="coupon_code" length="255" nullable="true" comment="Coupon Code"/>
+        <column xsi:type="decimal" name="total_tax" scale="4" precision="12" default="0.0000" nullable="false" comment="Total Tax"/>
+    
+        <!-- Order Status Flags -->
+        <column xsi:type="smallint" name="is_canceled" unsigned="true" nullable="false" default="0" comment="Canceled Status"/>
+        <column xsi:type="smallint" name="seller_pending_notification" unsigned="true" nullable="false" default="0" comment="Order Notification Flag for Sellers"/>
+    
+        <!-- Timestamps -->
+        <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+    
+        <!-- Primary Key -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+
+        <!-- Foreign Keys -->
+        <constraint xsi:type="foreign" referenceId="FK_ORDER_ORDER_ID" table="orders_data" column="order_id" referenceTable="sales_order" referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="FK_ORDER_SELLER_ID" table="orders_data" column="seller_id" referenceTable="seller_data" referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="FK_ORDER_BUYER_ID" table="orders_data" column="buyer_id" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+
+    
+        <!-- Indexes for faster lookups -->
+        <index referenceId="IDX_ORDER_ID" indexType="btree">
+            <column name="order_id"/>
+        </index>
+        <index referenceId="IDX_SELLER_ID" indexType="btree">
+            <column name="seller_id"/>
+        </index>
+        <index referenceId="IDX_BUYER_ID" indexType="btree">
+            <column name="buyer_id"/>
+        </index>
+        <index referenceId="IDX_ORDER_STATUS" indexType="btree">
+            <column name="order_status"/>
+        </index>
+    </table>
+    
+    <!-- Order items Table -->
+    <table name="order_item_data" resource="default" engine="innodb" comment="Marketplace Sales List Table">
+        <!-- Primary Information -->
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity ID (Primary Key)"/>
+    
+        <!-- Foreign Keys -->
+        <column xsi:type="int" name="order_id" unsigned="true" nullable="false" comment="Magento Order ID"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false" comment="Product ID"/>
+        <column xsi:type="int" name="seller_id" unsigned="true" nullable="false" comment="Seller ID"/>
+    
+        <!-- Item Details -->
+        <column xsi:type="varchar" name="product_name" length="225" nullable="false" comment="Product Name"/>
+        <column xsi:type="varchar" name="sku" length="255" nullable="false" comment="Product SKU"/>
+        <column xsi:type="decimal" name="price" precision="10,2" nullable="false" comment="Product Price"/>
+        <column xsi:type="varchar" name="quantity" length="255" nullable="false" comment="Quantity Ordered"/>
+        <column xsi:type="decimal" name="subtotal" precision="10,2" nullable="false" comment="Subtotal for this Item"/>
+        <column xsi:type="decimal" name="total_tax" precision="10,2" nullable="false" comment="Total Tax for this Item"/>
+    
+        <!-- Status Flags -->
+        <column xsi:type="smallint" name="is_shipped" unsigned="true" nullable="false" default="0" comment="Shipping Status (0: Not Shipped, 1: Shipped)"/>
+        <column xsi:type="smallint" name="is_coupon" unsigned="true" nullable="false" default="0" comment="Coupon Applied (0: No, 1: Yes)"/>
+    
+        <!-- Financial Details -->
+        <column xsi:type="decimal" name="coupon_amount" scale="4" precision="12" default="0.0000" nullable="false" comment="Coupon Amount Applied"/>
+        <column xsi:type="decimal" name="total_commission" scale="4" precision="12" default="0.0000" nullable="false" comment="Total Commission for Seller"/>
+        <column xsi:type="decimal" name="commission_rate" scale="4" precision="12" default="0.0000" nullable="false" comment="Commission Rate"/>
+        <column xsi:type="decimal" name="seller_amount" scale="4" precision="12" default="0.0000" nullable="false" comment="Amount Earned by Seller"/>
+    
+        <!-- Timestamps -->
+        <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+    
+        <!-- Primary Key -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    
+        <!-- Foreign Key Constraints -->
+        <constraint xsi:type="foreign" referenceId="FK_ORDER_ID" table="order_item_data" column="order_id" referenceTable="orders_data" referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="FK_PRODUCT_ID" table="order_item_data" column="product_id" referenceTable="product_data" referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="FK_SELLER_ID" table="order_item_data" column="seller_id" referenceTable="seller_data" referenceColumn="entity_id" onDelete="CASCADE"/>
+    
+        <!-- Indexes for faster lookups -->
+        <index referenceId="IDX_ORDER_ID" indexType="btree">
+            <column name="order_id"/>
+        </index>
+        <index referenceId="IDX_PRODUCT_ID" indexType="btree">
+            <column name="product_id"/>
+        </index>
+        <index referenceId="IDX_SELLER_ID" indexType="btree">
+            <column name="seller_id"/>
+        </index>
+    </table>
+    
+</schema>

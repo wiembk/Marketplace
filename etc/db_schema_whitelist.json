@@ -1,0 +1,123 @@
+{
+    "seller_data": {
+        "column": {
+            "entity_id": true,
+            "first_name": true,
+            "last_name": true,
+            "username": true,
+            "email": true,
+            "date_of_birth": true,
+            "gender": true,
+            "profile_pic": true,
+            "contact_number": true,
+            "password_encrypted": true,
+            "address_fields": true,
+            "social_media_ids": true,
+            "shop_url": true,
+            "shop_title": true,
+            "company_description": true,
+            "is_seller": true,
+            "store_id": true,
+            "payment_source": true,
+            "return_policy": true,
+            "shipping_policy": true,
+            "privacy_policy": true,
+            "allowed_categories": true,
+            "meta_keyword": true,
+            "meta_description": true,
+            "banner_pic": true,
+            "logo_pic": true,
+            "admin_notification": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "IDX_SELLER_ID": true
+        }
+    },
+    "product_data": {
+        "column": {
+            "entity_id": true,
+            "product_id": true,
+            "seller_id": true,
+            "store_id": true,
+            "status": true,
+            "is_approved": true,
+            "notification_flags": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_PRODUCT_MAGEPRD_ID_CAT_PRD_ENTT_ENTT_ID": true,
+            "FK_PRODUCT_SELLER_ID": true,
+            "IDX_MAGEPRODUCT_ID": true,
+            "IDX_SELLER_ID": true,
+            "IDX_STATUS": true
+        }
+    },
+    "orders_data": {
+        "column": {
+            "entity_id": true,
+            "order_id": true,
+            "seller_id": true,
+            "buyer_id": true,
+            "total_amount": true,
+            "order_status": true,
+            "payment_method": true,
+            "payment_status": true,
+            "shipping_charges": true,
+            "carrier_name": true,
+            "tracking_number": true,
+            "coupon_amount": true,
+            "coupon_code": true,
+            "total_tax": true,
+            "is_canceled": true,
+            "seller_pending_notification": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_ORDER_ORDER_ID": true,
+            "FK_ORDER_SELLER_ID": true,
+            "FK_ORDER_BUYER_ID": true,
+            "IDX_ORDER_ID": true,
+            "IDX_SELLER_ID": true,
+            "IDX_BUYER_ID": true,
+            "IDX_ORDER_STATUS": true
+        }
+    },
+    "order_item_data": {
+        "column": {
+            "entity_id": true,
+            "order_id": true,
+            "product_id": true,
+            "seller_id": true,
+            "product_name": true,
+            "sku": true,
+            "price": true,
+            "quantity": true,
+            "subtotal": true,
+            "total_tax": true,
+            "is_shipped": true,
+            "is_coupon": true,
+            "coupon_amount": true,
+            "total_commission": true,
+            "commission_rate": true,
+            "seller_amount": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_ORDER_ID": true,
+            "FK_PRODUCT_ID": true,
+            "FK_SELLER_ID": true,
+            "IDX_ORDER_ID": true,
+            "IDX_PRODUCT_ID": true,
+            "IDX_SELLER_ID": true
+        }
+    }
+}
