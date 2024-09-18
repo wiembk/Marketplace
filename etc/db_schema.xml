@@ -57,7 +57,7 @@
     
         <!-- Indexes -->
         <index referenceId="IDX_SELLER_ID" indexType="btree">
-            <column name="seller_id"/>
+            <column name="entity_id"/>
         </index>
     </table>
 
