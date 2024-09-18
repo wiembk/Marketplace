@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/sellers" method="GET">
+        <service class="Wamia\Marketplace\Api\SellerRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/sellers/:id" method="GET">
+        <service class="Wamia\Marketplace\Api\SellerRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/sellers" method="POST">
+        <service class="Wamia\Marketplace\Api\SellerRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <route url="/V1/seller/login" method="POST">
+        <service class="Wamia\Marketplace\Model\Seller\Login\LoginService" method="loginSeller"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <!-- <route url="/V1/seller/forgot_password" method="POST">
+        <service class="Wamia\Marketplace\Model\Seller\Login\PasswordResetService" method="generateResetToken"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <route url="/V1/seller/reset_password" method="POST">
+        <service class="Wamia\Marketplace\Model\Seller\Login\PasswordResetService" method="resetPassword"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route> -->
+    
+    <route url="/V1/seller/approve" method="POST">
+        <service class="Wamia\Marketplace\Model\Seller\Login\AdminApprovalService" method="approveSeller"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+
+    <route url="/V1/seller/signup" method="POST">
+        <service class="Wamia\Marketplace\Model\Seller\Login\SignInService" method="signInSeller"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

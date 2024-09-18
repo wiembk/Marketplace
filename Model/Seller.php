@@ -347,8 +347,15 @@ class Seller extends AbstractModel implements SellerInterface
      */
     public function setIsSeller($isSeller)
     {
-        return $this->setData(self::IS_SELLER, $isSeller);
+        $allowedStatuses = [0, 1, -1]; // 0 = pending, 1 = approved, -1 = refused
+    
+        if (!in_array($isSeller, $allowedStatuses)) {
+            throw new \Magento\Framework\Exception\LocalizedException(__('Invalid seller status.'));
+        }
+    
+        return $this->setData('is_seller', $isSeller);
     }
+    
 
     /**
      * Get store ID.

@@ -22,6 +22,14 @@ interface SellerRepositoryInterface
      * @return SellerInterface
      */
     public function getById($id);
+        
+    /**
+     * Retrieve a seller by Email.
+     *
+     * @param string $email
+     * @return SellerInterface
+     */
+    public function getByEmail($email);
 
     /**
      * Delete a seller.

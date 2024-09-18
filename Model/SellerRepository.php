@@ -53,6 +53,19 @@ class SellerRepository implements SellerRepositoryInterface
         return $seller;
     }
 
+    public function getByEmail($email)
+    {
+        $collection = $this->sellerCollectionFactory->create();
+        $collection->addFieldToFilter('email', $email);
+        $seller = $collection->getFirstItem();
+
+        if (!$seller->getId()) {
+            throw new \Magento\Framework\Exception\NoSuchEntityException(__('Seller with email "%1" does not exist.', $email));
+        }
+
+        return $seller;
+    }
+
     public function delete(SellerInterface $seller)
     {
         try {
