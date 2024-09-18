@@ -116,7 +116,7 @@
         <column xsi:type="int" name="buyer_id" unsigned="true" nullable="false" comment="Buyer ID"/>
     
         <!-- Order Details -->
-        <column xsi:type="decimal" name="total_amount" precision="10,2" nullable="false" comment="Total Order Amount"/>
+        <column xsi:type="decimal" name="total_amount" default="0.00" precision="10" scale="2" nullable="false" comment="Total Order Amount"/>
         <column xsi:type="varchar" name="order_status" length="32" nullable="false" comment="Order Status"/>
         <column xsi:type="varchar" name="payment_method" length="255" nullable="false" comment="Payment Method"/>
         <column xsi:type="smallint" name="payment_status" unsigned="true" nullable="false" default="0" comment="Payment Status"/>
@@ -178,10 +178,10 @@
         <!-- Item Details -->
         <column xsi:type="varchar" name="product_name" length="225" nullable="false" comment="Product Name"/>
         <column xsi:type="varchar" name="sku" length="255" nullable="false" comment="Product SKU"/>
-        <column xsi:type="decimal" name="price" precision="10,2" nullable="false" comment="Product Price"/>
+        <column xsi:type="decimal" name="price" default="0.00" precision="10" scale="2" nullable="false" comment="Product Price"/>
         <column xsi:type="varchar" name="quantity" length="255" nullable="false" comment="Quantity Ordered"/>
-        <column xsi:type="decimal" name="subtotal" precision="10,2" nullable="false" comment="Subtotal for this Item"/>
-        <column xsi:type="decimal" name="total_tax" precision="10,2" nullable="false" comment="Total Tax for this Item"/>
+        <column xsi:type="decimal" name="subtotal" default="0.00" precision="10" scale="2" nullable="false" comment="Subtotal for this Item"/>
+        <column xsi:type="decimal" name="total_tax" default="0.00" precision="10" scale="2" nullable="false" comment="Total Tax for this Item"/>
     
         <!-- Status Flags -->
         <column xsi:type="smallint" name="is_shipped" unsigned="true" nullable="false" default="0" comment="Shipping Status (0: Not Shipped, 1: Shipped)"/>
