@@ -95,7 +95,7 @@
     
         <!-- Indexes for faster lookups -->
         <index referenceId="IDX_MAGEPRODUCT_ID" indexType="btree">
-            <column name="mageproduct_id"/>
+            <column name="product_id"/>
         </index>
         <index referenceId="IDX_SELLER_ID" indexType="btree">
             <column name="seller_id"/>
