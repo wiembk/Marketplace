@@ -26,7 +26,7 @@ class LoginService implements LoginInterface
 
     }
 
-    public function loginSeller($credentials)
+    public function loginSeller(array $credentials)
     {
         try {
             // Attempt to load the seller by email
