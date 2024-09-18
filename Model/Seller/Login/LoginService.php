@@ -2,20 +2,27 @@
 
 namespace Wamia\Marketplace\Model\Seller\Login;
 
+use Wamia\Marketplace\Api\Seller\LoginInterface; 
 use Wamia\Marketplace\Api\SellerRepositoryInterface;
 use Magento\Framework\Encryption\EncryptorInterface;
+
 
 class LoginService
 {
     protected $sellerRepository;
     protected $encryptor;
+    protected $sellerFactory;
+
 
     public function __construct(
         SellerRepositoryInterface $sellerRepository,
-        EncryptorInterface $encryptor
+        EncryptorInterface $encryptor,
+        SellerFactory $sellerFactory 
     ) {
         $this->sellerRepository = $sellerRepository;
         $this->encryptor = $encryptor;
+        $this->sellerFactory = $sellerFactory; // Set it here
+
     }
 
     public function loginSeller($credentials)

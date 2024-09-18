@@ -3,6 +3,7 @@
 namespace Wamia\Marketplace\Model\Seller\Login;
 
 use Wamia\Marketplace\Api\SellerRepositoryInterface;
+use Wamia\Marketplace\Api\Seller\LoginInterface;
 
 class AdminApprovalService
 {

@@ -20,14 +20,7 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
-    
-    <route url="/V1/seller/login" method="POST">
-        <service class="Wamia\Marketplace\Model\Seller\Login\LoginService" method="loginSeller"/>
-        <resources>
-            <resource ref="anonymous"/>
-        </resources>
-    </route>
-    
+       
     <!-- <route url="/V1/seller/forgot_password" method="POST">
         <service class="Wamia\Marketplace\Model\Seller\Login\PasswordResetService" method="generateResetToken"/>
         <resources>
@@ -42,17 +35,27 @@
         </resources>
     </route> -->
     
-    <route url="/V1/seller/approve" method="POST">
-        <service class="Wamia\Marketplace\Model\Seller\Login\AdminApprovalService" method="approveSeller"/>
+    <!-- Login API -->
+    <route url="/V1/seller/login" method="POST">
+        <service class="Wamia\Marketplace\Api\Seller\LoginInterface" method="loginSeller"/>
         <resources>
-            <resource ref="Magento_Backend::admin"/>
+            <resource ref="anonymous"/>
         </resources>
     </route>
 
+    <!-- Sign-Up API -->
     <route url="/V1/seller/signup" method="POST">
-        <service class="Wamia\Marketplace\Model\Seller\Login\SignInService" method="signInSeller"/>
+        <service class="Wamia\Marketplace\Api\Seller\LoginInterface" method="signInSeller"/>
         <resources>
             <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Approve Seller API (Admin Action) -->
+    <route url="/V1/seller/approve" method="POST">
+        <service class="Wamia\Marketplace\Api\Seller\LoginInterface" method="approveSeller"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
         </resources>
     </route>
 </routes>
