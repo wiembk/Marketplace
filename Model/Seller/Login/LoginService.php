@@ -2,12 +2,13 @@
 
 namespace Wamia\Marketplace\Model\Seller\Login;
 
+use Wamia\Marketplace\Model\SellerFactory;
 use Wamia\Marketplace\Api\Seller\LoginInterface; 
 use Wamia\Marketplace\Api\SellerRepositoryInterface;
 use Magento\Framework\Encryption\EncryptorInterface;
 
 
-class LoginService
+class LoginService implements LoginInterface
 {
     protected $sellerRepository;
     protected $encryptor;

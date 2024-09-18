@@ -19,12 +19,4 @@ interface LoginInterface
      * @return \Wamia\Marketplace\Api\Data\SellerInterface
      */
     public function signInSeller(array $sellerData);
-
-    /**
-     * Approve a seller (admin action).
-     *
-     * @param int $sellerId
-     * @return void
-     */
-    public function approveSeller($sellerId);
 }

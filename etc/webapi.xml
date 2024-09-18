@@ -53,7 +53,7 @@
 
     <!-- Approve Seller API (Admin Action) -->
     <route url="/V1/seller/approve" method="POST">
-        <service class="Wamia\Marketplace\Api\Seller\LoginInterface" method="approveSeller"/>
+        <service class="Wamia\Marketplace\Api\Seller\AdminApprovalInterface" method="approveSeller"/>
         <resources>
             <resource ref="Magento_Backend::admin"/>
         </resources>
