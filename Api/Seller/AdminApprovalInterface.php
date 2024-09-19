@@ -7,6 +7,7 @@ interface AdminApprovalInterface
     /**
      * Approve a seller (admin action).
      *
+     * @api
      * @param int $sellerId
      * @return void
      */
