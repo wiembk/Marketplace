@@ -48,7 +48,7 @@
     
         <!-- Timestamps -->
         <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
-        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
     
         <!-- Primary Key -->
         <constraint xsi:type="primary" referenceId="PRIMARY">
@@ -80,7 +80,7 @@
     
         <!-- Timestamps -->
         <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
-        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
     
         <!-- Primary Key -->
         <constraint xsi:type="primary" referenceId="PRIMARY">
@@ -137,7 +137,7 @@
     
         <!-- Timestamps -->
         <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
-        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
     
         <!-- Primary Key -->
         <constraint xsi:type="primary" referenceId="PRIMARY">
@@ -195,7 +195,7 @@
     
         <!-- Timestamps -->
         <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
-        <column xsi:type="timestamp" name="updated_at" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Update Time"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
     
         <!-- Primary Key -->
         <constraint xsi:type="primary" referenceId="PRIMARY">
