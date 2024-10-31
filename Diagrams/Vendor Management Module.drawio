@@ -96,6 +96,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="44NTMWJ-f4JuKy9p9K9x-30" value="&lt;h3 style=&quot;text-align: left; font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Explanation&lt;/strong&gt;&lt;/h3&gt;&lt;ul style=&quot;font-size: 14px;&quot;&gt;&lt;li style=&quot;text-align: left; font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot;&gt;ResPartner&lt;/code&gt;&lt;/strong&gt;: Odoo&#39;s base model for contacts.&lt;/li&gt;&lt;li style=&quot;text-align: left; font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot;&gt;ResUsers&lt;/code&gt;&lt;/strong&gt;: Model for system users; sellers are portal users linked to &lt;code style=&quot;font-size: 14px;&quot;&gt;ResPartner&lt;/code&gt;.&lt;/li&gt;&lt;li style=&quot;text-align: left; font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot;&gt;SellerProfile&lt;/code&gt;&lt;/strong&gt;: Custom model extending &lt;code style=&quot;font-size: 14px;&quot;&gt;ResPartner&lt;/code&gt; with seller-specific fields and methods.&lt;/li&gt;&lt;/ul&gt;&lt;h3 style=&quot;font-size: 14px;&quot;&gt;&lt;/h3&gt;&lt;h2 style=&quot;font-size: 14px;&quot;&gt;&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;spacingTop=6;spacing=15;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="500" height="200" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
