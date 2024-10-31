@@ -1,9 +1,80 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" version="24.8.3">
   <diagram name="Page-1" id="qLU_RXssmR1IcsP6l8aX">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="N6CsATb-oGAC4B2f394l-1" value="OdooSystem" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="662" as="geometry" />
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-2" value="PaymentGateway" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="295" y="20" width="152" height="662" as="geometry" />
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-3" value="MarketplaceAccount" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="497" y="20" width="174" height="662" as="geometry" />
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-4" value="SellerAccounts" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="721" y="20" width="150" height="662" as="geometry" />
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-5" value="Sellers" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="921" y="20" width="150" height="662" as="geometry" />
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-6" value="Process Customer Payment" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-1" target="N6CsATb-oGAC4B2f394l-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="242" y="176" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-7" value="Confirm Payment Success" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-2" target="N6CsATb-oGAC4B2f394l-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="245" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-8" value="Deposit Funds" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-2" target="N6CsATb-oGAC4B2f394l-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="486" y="284" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-9" value="Record Transaction Details" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-1" target="N6CsATb-oGAC4B2f394l-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="146" y="338" />
+              <mxPoint x="146" y="368" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-10" value="Transfer Seller Earnings" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-1" target="N6CsATb-oGAC4B2f394l-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="454" y="469" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-11" value="Deduct Commissions" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-1" target="N6CsATb-oGAC4B2f394l-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="523" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-12" value="Send Payout Notification" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="N6CsATb-oGAC4B2f394l-1" target="N6CsATb-oGAC4B2f394l-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="554" y="577" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-13" value="During Checkout" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="70" y="95" width="326" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="N6CsATb-oGAC4B2f394l-14" value="At Payout Schedule" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="70" y="388" width="751" height="47" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
