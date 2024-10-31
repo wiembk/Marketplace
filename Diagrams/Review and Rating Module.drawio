@@ -141,7 +141,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="UUY9zVeeaW87Lb-b9e2w-41" value="&lt;h3 style=&quot;font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Explanation&lt;/strong&gt;&lt;/h3&gt;&lt;ul style=&quot;font-size: 14px;&quot;&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot;&gt;ProductReview&lt;/code&gt;&lt;/strong&gt;: Reviews for products.&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot;&gt;SellerReview&lt;/code&gt;&lt;/strong&gt;: Reviews for sellers.&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Associations&lt;/strong&gt;:&lt;ul style=&quot;font-size: 14px;&quot;&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;Reviews are linked to products/sellers and customers.&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;Methods for approving or rejecting reviews.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;align=left;spacing=11;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="640" y="80" width="440" height="230" as="geometry" />
+          <mxGeometry x="640" y="80" width="440" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UUY9zVeeaW87Lb-b9e2w-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UUY9zVeeaW87Lb-b9e2w-41" target="UUY9zVeeaW87Lb-b9e2w-41">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
