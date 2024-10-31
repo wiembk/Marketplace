@@ -1,9 +1,84 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" version="24.8.3">
   <diagram name="Page-1" id="yWB0PHhxvBoZg5yhXl3D">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-1" value="Customer" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-2" value="OdooSystem" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="301" y="20" width="150" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-3" value="Seller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="648" y="20" width="150" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-4" value="PaymentGateway" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="848" y="20" width="152" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-5" value="Initiate Return Request" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-1" target="sFJxfIBSYogfzN1aQ-0v-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="244" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-6" value="Notify Return Request" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-2" target="sFJxfIBSYogfzN1aQ-0v-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="558" y="183" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-7" value="Approve Return" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-3" target="sFJxfIBSYogfzN1aQ-0v-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="561" y="237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-8" value="Provide Return Instructions" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-2" target="sFJxfIBSYogfzN1aQ-0v-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="247" y="291" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-9" value="Return Product" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-1" target="sFJxfIBSYogfzN1aQ-0v-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="418" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-10" value="Confirm Receipt of Returned Product" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-3" target="sFJxfIBSYogfzN1aQ-0v-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="561" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-11" value="Process Refund" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-2" target="sFJxfIBSYogfzN1aQ-0v-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="659" y="453" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-12" value="Refund Issued" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-4" target="sFJxfIBSYogfzN1aQ-0v-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="521" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sFJxfIBSYogfzN1aQ-0v-13" value="Confirm Refund Completion" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="sFJxfIBSYogfzN1aQ-0v-2" target="sFJxfIBSYogfzN1aQ-0v-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="247" y="561" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
