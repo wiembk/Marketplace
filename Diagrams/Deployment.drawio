@@ -1,9 +1,83 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" version="24.8.3">
   <diagram name="Page-1" id="gyNCBlniiEe1w-Xpgd1s">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-1" value="Users" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="739" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-2" value="Cloud" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="78" y="167" width="594" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-3" value="Load Balancer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="295" y="192" width="164" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-4" value="Odoo Server 1" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="113" y="289" width="164" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-5" value="Odoo Server 2" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="473" y="289" width="164" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-6" value="PostgreSQL Database" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="290" y="386" width="175" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-7" value="Customer Devices" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="55" y="45" width="191" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-8" value="Seller Devices" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="296" y="45" width="162" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-9" value="Administrator Devices" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="508" y="45" width="216" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-10" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0;entryY=0.13;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-7" target="USIh90j3KQqMjcH3DNUQ-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-8" target="USIh90j3KQqMjcH3DNUQ-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-12" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.15;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-9" target="USIh90j3KQqMjcH3DNUQ-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="616" y="167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-13" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.97;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-3" target="USIh90j3KQqMjcH3DNUQ-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="264" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-14" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.97;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-3" target="USIh90j3KQqMjcH3DNUQ-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="264" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-15" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0;entryY=0.1;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-4" target="USIh90j3KQqMjcH3DNUQ-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="361" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="USIh90j3KQqMjcH3DNUQ-16" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.09;rounded=0;" edge="1" parent="1" source="USIh90j3KQqMjcH3DNUQ-5" target="USIh90j3KQqMjcH3DNUQ-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="361" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
