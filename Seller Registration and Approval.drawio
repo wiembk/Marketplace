@@ -1,9 +1,83 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" version="24.8.0">
   <diagram name="Page-1" id="jnxWJ6qah6bdQAMoxmE9">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-1" value="Seller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="696" as="geometry" />
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-2" value="OdooSystem" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="394" y="20" width="150" height="696" as="geometry" />
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-3" value="Administrator" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="688" y="20" width="150" height="696" as="geometry" />
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-4" value="alt" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30" vertex="1" parent="1">
+          <mxGeometry x="84" y="311" width="690" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-5" value="[If Approved]" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="8Yj7P7NHWwo5I0PsN4sw-4">
+          <mxGeometry x="30" width="660" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-6" value="[If Rejected]" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;" vertex="1" parent="8Yj7P7NHWwo5I0PsN4sw-4">
+          <mxGeometry y="160" width="690" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-7" value="Submit Registration Form" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-1" target="8Yj7P7NHWwo5I0PsN4sw-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="291" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-8" value="Acknowledge Submission" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-2" target="8Yj7P7NHWwo5I0PsN4sw-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="294" y="183" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-9" value="Notify New Seller Registration" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-2" target="8Yj7P7NHWwo5I0PsN4sw-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="625" y="237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-10" value="Review Application" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-3" target="8Yj7P7NHWwo5I0PsN4sw-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="628" y="291" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-11" value="Approve Seller" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-3" target="8Yj7P7NHWwo5I0PsN4sw-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="628" y="392" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-12" value="Send Approval Email with Activation Link" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-2" target="8Yj7P7NHWwo5I0PsN4sw-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="294" y="446" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-13" value="Reject Seller" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-3" target="8Yj7P7NHWwo5I0PsN4sw-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="628" y="547" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8Yj7P7NHWwo5I0PsN4sw-14" value="Send Rejection Email with Reason" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="8Yj7P7NHWwo5I0PsN4sw-2" target="8Yj7P7NHWwo5I0PsN4sw-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="294" y="601" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
