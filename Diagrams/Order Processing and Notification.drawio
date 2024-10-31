@@ -1,9 +1,88 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" version="24.8.3">
   <diagram name="Page-1" id="Y0Fo2GZdI5vu-M1aY3jn">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-1" value="OdooSystem" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="49" y="20" width="150" height="723" as="geometry" />
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-2" value="Seller1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="385" y="20" width="150" height="723" as="geometry" />
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-3" value="Seller2" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="585" y="20" width="150" height="723" as="geometry" />
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-4" value="Customer" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="785" y="20" width="150" height="723" as="geometry" />
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-5" value="Split Order by Seller" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-1" target="LXq5Oy4J_rDPlEPY-NzQ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="175" y="176" />
+              <mxPoint x="175" y="206" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-6" value="Send Order Notification" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-1" target="LXq5Oy4J_rDPlEPY-NzQ-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="301" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-7" value="Send Order Notification" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-1" target="LXq5Oy4J_rDPlEPY-NzQ-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="401" y="314" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-8" value="Acknowledge Order" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-2" target="LXq5Oy4J_rDPlEPY-NzQ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="304" y="368" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-9" value="Acknowledge Order" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-3" target="LXq5Oy4J_rDPlEPY-NzQ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="404" y="422" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-10" value="Update Order Status (e.g., Shipped)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-2" target="LXq5Oy4J_rDPlEPY-NzQ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="304" y="476" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-11" value="Update Order Status (e.g., Shipped)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-3" target="LXq5Oy4J_rDPlEPY-NzQ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="404" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-12" value="Update Order Status" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-1" target="LXq5Oy4J_rDPlEPY-NzQ-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="501" y="584" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-13" value="Send Shipping Notifications" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="LXq5Oy4J_rDPlEPY-NzQ-1" target="LXq5Oy4J_rDPlEPY-NzQ-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="501" y="638" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXq5Oy4J_rDPlEPY-NzQ-14" value="After Order Confirmation" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="20" y="95" width="209" height="47" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
